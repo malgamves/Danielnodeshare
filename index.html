@@ -20,9 +20,16 @@
         <p id="listOfMessages"></p>
     </div>
     <script type="text/javascript">
+            var y = [];
             function myFunction() {
+
                 var x = document.getElementById("newMessage").value;
-                document.getElementById("listOfMessages").innerHTML = x;
+                y.push(x);
+                console.log(y);
+                
+                // This prints multiple input texts but in the same line i'm sure you can fix that
+                // to make it print them on different lines
+                document.getElementById("listOfMessages").innerHTML = y;
             }
                 /*    
                 getAllItems();
