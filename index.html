@@ -1,24 +1,30 @@
 <html>
+
 <head>
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <title>Share It Here ! </title>
 </head>
 
 <body>
-        <div class="container">
-        
-            <h2>Node.js + Socket Demo</h2>
-            <h3>This text can be sharable among your team in a LAN and they can add text and share it with you too</h3>
-            <h4>Add Text : </h4>
-            <input class="form-control" type="text" placeholder="Add Your Message Here ! " id="newMessage">
-            <br>
-            <button id="addMessage" class="btn btn-success">Add ! </button><br> 
-            <div id="listOfMessages"></div>
-        </div>
-        <script type="text/javascript">
-                $(() => {
+    <div class="container">
+
+        <h2>Node.js + Socket Demo</h2>
+        <h3>This text can be sharable among your team in a LAN and they can add text and share it with you too</h3>
+        <h4>Add Text : </h4>
+        <input class="form-control" type="text" placeholder="Add Your Message Here! " id="newMessage">
+        <br>
+        <button onclick="myFunction()" id="addMessage" class="btn btn-success">Add! </button>
+        <br>
+        <p id="listOfMessages"></p>
+    </div>
+    <script type="text/javascript">
+            function myFunction() {
+                var x = document.getElementById("newMessage").value;
+                document.getElementById("listOfMessages").innerHTML = x;
+            }
+                /*    
                 getAllItems();
                  $("#addMessage").click( () => {
                    // addItem({"item": $("#newMessage").val()});
@@ -41,8 +47,9 @@
 
 	    	function postItem(theItem){
 			$.post("/items", theItem);
-		}
-             </script>
-             
-    </body>
+		}*/
+    </script>
+
+</body>
+
 </html>
